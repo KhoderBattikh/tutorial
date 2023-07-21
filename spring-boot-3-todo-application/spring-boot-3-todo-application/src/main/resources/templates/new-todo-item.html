@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-2">
+            <p><a class="btn btn-outline-success" href="/">
+                <i class="bi bi-arrow-left-square-fill"></i> Back
+            </a></p>
+        </div>
+    </div>
+    <div class="row mt-6">
+        <h2>Add a new Todo Item</h2>
+        <form action="#" th:action="@{/todo}" th:object="${todoItem}" method="post">
+            <div class="form-group">
+                <label for="description"></label>
+                <input class="form-control"
+                       type="text"
+                       field="*{descriptipn}"
+                       id="description"
+                       placeholder="Description1"
+                >
+                <button type="submit" class="btn btn-outline-success">
+                    <i class="bi bi-plus-square-fill"></i> Add Todo
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
